@@ -1,1 +1,1 @@
-<h2>majority-element-ii Notes</h2><hr>[ Time taken: 3hrs 45m 38s ]
+<h2>majority-element-ii Notes</h2><hr>[ Time taken: 4hrs 20m 20s ]
