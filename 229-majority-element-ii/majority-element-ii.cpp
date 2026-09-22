@@ -8,7 +8,7 @@ public:
         vector<int> ans;
         int limit = nums.size() / 3;
 
-        for (auto x : mpp) {
+        for (auto x : mpp) { //using auto sucks tbf
             int element = x.first;
             int count = x.second;
         
