@@ -1,33 +1,22 @@
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
-
-        int n = nums.size();
+        unordered_map<int, int> mpp;
+        for (int i = 0; i < nums.size(); i++) {
+            mpp[nums[i]]++;
+        }
         vector<int> ans;
+        int limit = nums.size() / 3;
 
-        for (int i = 0; i < n; i++) {
-
-            // skip if this value is already in the answer
-            if (ans.size() == 0 || ans[0] != nums[i]) {
-
-                int count = 0;
-                for (int j = 0; j < n; j++) {
-                    if (nums[j] == nums[i]) {
-                        count++;
-                    }
-                }
-
-                if (count > n / 3) {
-                    ans.push_back(nums[i]);
-                }
-            }
-
-            // at most 2 answers can exist
-            if (ans.size() == 2) {
-                break;
-            }
+        for (auto x : mpp) {
+            int element = x.first;
+            int count = x.second;
+        
+        if (count > limit) {
+            ans.push_back(element);
         }
 
+        }
         return ans;
     }
 };
