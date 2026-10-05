@@ -16,7 +16,7 @@ public:
 
             if(s[i]==')' && s[i-1]=='(')
             {
-                score = score + pow(2 , open);
+                score = score + pow(2 , open); // score is the summation of the value of x where x is the 2^(no of open parathnesis)
             }
 
         }
