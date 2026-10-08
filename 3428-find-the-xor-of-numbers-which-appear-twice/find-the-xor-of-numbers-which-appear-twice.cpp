@@ -1,11 +1,17 @@
 class Solution {
 public:
     int duplicateNumbersXOR(vector<int>& nums) {
-        int ans = 0;
-        sort(nums.begin(),nums.end());
-        for(int i = 0; i < nums.size()-1; i++){
-            if(nums[i] == nums[i+1]){
-                ans ^= nums[i];
+        unordered_map<int , int>mpp;
+        for( int x  : nums)
+        {
+            mpp[x]++;
+        }
+        int ans =0;
+        for( auto x : mpp)
+        {
+            if (x.second==2)
+            {
+                ans= ans^x.first;
             }
         }
         return ans;
