@@ -7,5 +7,6 @@ public:
             temp[i]=nums[nums[i]];
         }
         return temp;
+        //had to just build the array using the given formula ans[i] = nums[nums[i]] lmao 
     }
 };
